@@ -1,6 +1,5 @@
-theme better soceity..
-
-work to tbe done on "a webpage for Ngo"
+Theme: Better Society
+Heading:"a webpage for Ngo"
 ::    intro to the page 
 ::    make a data base of the problems 
 ::    another for solution
@@ -10,10 +9,8 @@ work to tbe done on "a webpage for Ngo"
 ::    integration with google
 ::    location map of nearby by ngo places + child homes + vridhashram + police station
 
-
-theme better society..
-
-work to be done for " VIT clubZ-A better version of VIT Intranet "
+Theme: Better Society
+Heading: " VIT clubZ-A better version of VIT Intranet "
 :: create a cloud storage
 :: faculty login,member login,council login,Open for all
 	::OPEN FOR ALL-people can get photos for events 
@@ -23,14 +20,14 @@ work to be done for " VIT clubZ-A better version of VIT Intranet "
 :: suggestion box
 :: pop-up notifications
 
-theme better society...
-work to be done for "Opinions Site"
+Theme: Better Society
+Heading: "Opinions Site"
 Description: A website where people people share their opinion and articles on current topics for newspapers to follow.
 
 ::Database to store the articles
 ::A Search option to look for a particular article
 
-
+Theme: Better Society
 
 
 
