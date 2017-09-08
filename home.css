@@ -5,8 +5,9 @@
 	margin:auto;
 }
 #header {
+	background-image: url("backImg.jpg");
 	margin: auto;
-	border: 1px dashed blue;
+	border: 2px solif thin white;
 	height: 80px;
 	background-color: #4b86b4;
 }
@@ -27,20 +28,18 @@
 	margin: auto;
 }
 
+#mainContentBody{
+	background-color: #adcbe3;
+	background-image: url("mainContent.jpg");
+}
+
 #bodyTable{
 	height: 600px;
 	width:200px;
 	border:1px dashed black;
 }
-#animateBox{
-
-	margin-top:0px;
-	#border: 1px solid black;
-	height: 0px;
-	width:50px;
-}
 .item {
-	color: #e7eff6;
+	color: #2a4d69;
 	padding: 10px 2px 0px 2px;
 	display: inline-block;
 	font-size: 20px;
@@ -68,6 +67,9 @@
 #stateAuto{
 	color: #2a4d69;
 }
+#stateDis{
+	color: #2a4d69;
+}
 .textField:focus {
 	box-shadow: 0 0 2px rgba(81, 203, 238, 1);
 	border: 1px solid rgba(81, 203, 238, 1);
@@ -79,6 +81,8 @@
 
 #ajaxContent{
 	border-collapse: collapse;
+	background: rgba(255,255,255,0.5);
+		
 }
 
 #ajaxContent tr td{
@@ -86,4 +90,8 @@
 }
 #ajaxContent, #ajaxContent tr, #ajaxContent tr td{
 	border: 1px solid black;
+}
+
+#footer{
+	padding-top:100px;
 }
