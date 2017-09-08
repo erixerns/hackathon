@@ -12,18 +12,20 @@ if($connection->connect_error){
 }
 
 if(count($_GET)>0){
-    $state=($_GET['state']);
-	$dis=($_GET['dis']);
+    $key=($_GET['key']);
+	$column=($_GET['col']);
 }
-
 
 $str="";
-$sqlCommand = "Select distinct state , district from ngotable where state like '$state%' and district like '$dis%';";
-$result = $connection->query($sqlCommand);
-while($data = $result->fetch_assoc()){
-	$str=$str."<tr><td>".$data['state']."</td><td>".$data['district']."</td></tr>";
-}
 
-echo $str;
+$sqlCommand = "Select distinct $column from ngotable where $column like '$key%';";
+$result = $connection->query($sqlCommand);
+$data = $result->fetch_assoc();
+
+
+
+echo ucwords(strtolower($data[$column]));
+
+
 
 ?>

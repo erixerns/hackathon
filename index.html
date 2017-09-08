@@ -27,22 +27,20 @@
     <tr align="center">
       <td style="height: 100px"><div id="contentBody">
           <div id="contentForeBody">
-            <table>
+            <table style="width: 500px">
               <tr>
-                <td><input type="text" name="state" placeholder="State" class="textField" id="stateField" onKeyUp="getNGO(this.value)"/></td>
+                <td class="tdTxt"><input type="text" name="state" placeholder="State" class="textField" id="stateField" onKeyUp="autocompleteState(this.value)"/></td><td id="stateAuto"></td>
               </tr>
-              <tr>
-                <td><input type="text" name="district" placeholder="District" class="textField"/></td>
+              <tr style="width:700px">
+                <td class="tdTxt"><input type="text" name="district" placeholder="District" class="textField" onKeyUp="autocompleteDis(this.value)" id="disField"/></td><td id="disAuto"></td>
               </tr>
             </table>
           </div>
         </div></td>
     </tr>
-    <tr>
-      <table id="ajaxContent">
-      </table>
-    </tr>
   </table>
+        <div id="ajaxContent" style="height: 100px; width:100px">
+      </div>
   <p id="test"></p>
 </div>
 <div id="footer">
@@ -56,19 +54,53 @@
 	document.getElementById("footer").style.width=screenWidth;
 </script> 
 <script>
-	
-function getNGO(str) {
+var valid=true;
+function autocompleteState(str) {
     if (str.length == 0) { 
-        document.getElementById("test").innerHTML = "";
+        document.getElementById("stateAuto").innerHTML = "";
         return;
     } else {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("test").innerHTML = this.responseText;
+                document.getElementById("stateAuto").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET", "sqldata.php?key=" + str, true);
+        xmlhttp.open("GET", "autocorrect.php?key=" + str + "&col="+"state" , true);
+        xmlhttp.send();
+    }
+}
+function autocompleteDis(str) {
+	valid=true;
+    if (str.length == 0) { 
+        document.getElementById("disAuto").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("disAuto").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "autocorrect.php?key=" + str + "&col="+"district" , true);
+        xmlhttp.send();
+    }
+}
+	
+if(valid == true){
+
+		var district = document.getElementById("disField").value;
+	var state = document.getElementById("stateField").value;
+	    if (district.length == 0) { 
+        document.getElementById("ajaxContent").innerHTML = "";
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("ajaxContent").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "sqldata.php?state=m&dis=u"/* + state + "&dis="+district */, true);
         xmlhttp.send();
     }
 }

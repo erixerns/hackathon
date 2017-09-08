@@ -51,9 +51,9 @@
 }
 #contentForeBody {
 	padding-top: 10px;
-	width: 300px;
+	width: 600px;
 	margin: auto;
-	height: 150px;
+	height: 100px;
 }
 .textField {	
 	padding-bottom: 3px;
@@ -63,11 +63,22 @@
 	-o-transition: all 0.30s ease-in-out;
 	margin:auto;
 	height: 35px;;
-	width: 270px;
+	width: inherit;
 	outline: none;
 	border: 1px solid #949191;
+}
+#stateAuto{
+	color: #2a4d69;
 }
 .textField:focus {
 	box-shadow: 0 0 2px rgba(81, 203, 238, 1);
 	border: 1px solid rgba(81, 203, 238, 1);
+}
+#
+.tdTxt {
+	width: 250px;
+}
+
+#ajaxContent{
+	border: 1px solid black;
 }
