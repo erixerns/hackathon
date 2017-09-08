@@ -12,12 +12,18 @@ if($connection->connect_error){
 }
 
 if(count($_GET)>0){
-    $key=($_GET);
+    $state=($_GET['state']);
+	$dis=($_GET['dis']);
 }
 
-$sqlCommand = "Select * from ngoData where keyword like %$key%;";
-$result = mysqli_query($sqlCommand);
 
-echo $result;
+$str="";
+$sqlCommand = "Select distinct state , district, name, scheme from ngotable where state like '$state%' and district like '$dis%';";
+$result = $connection->query($sqlCommand);
+while($data = $result->fetch_assoc()){
+	$str=$str."<tr><td>".$data['state']."</td><td>".$data['district']."</td><td>".$data['name']."</td><td>".$data['scheme']."</td></tr>";
+}
+
+echo $str;
 
 ?>

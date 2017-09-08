@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+#body{
+	margin:auto;
+}
+#header {
+	background-image: url("backImg.jpg");
+	margin: auto;
+	border: 2px solif thin white;
+	height: 80px;
+	background-color: #4b86b4;
+}
+#tabBar {
+	border: 1px solid black;
+	margin: auto;
+	width: 260px;
+}
+#contentBody div{
+	display:inline-block;
+	overflow: auto;
+}
+#tabs {
+	list-style: none;
+	height: 50px;
+	width: 220px;
+	;
+	margin: auto;
+}
+
+#mainContentBody{
+	background-color: #adcbe3;
+	background-image: url("mainContent.jpg");
+}
+
+#bodyTable{
+	height: 600px;
+	width:200px;
+	border:1px dashed black;
+}
+.item {
+	color: #2a4d69;
+	padding: 10px 2px 0px 2px;
+	display: inline-block;
+	font-size: 20px;
+}
+#contentBody{
+	height: 150px;
+	width: 700px;
+}
+#contentForeBody {
+	padding-top: 20px;
+	height: 95px;
+}
+.textField {	
+	padding-bottom: 3px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	margin:auto;
+	height: 35px;;
+	width: inherit;
+	outline: none;
+	border: 1px solid #949191;
+}
+#stateAuto{
+	color: #2a4d69;
+}
+#stateDis{
+	color: #2a4d69;
+}
+.textField:focus {
+	box-shadow: 0 0 2px rgba(81, 203, 238, 1);
+	border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.tdTxt {
+	width: 300px;
+}
+
+#ajaxContent{
+	border-collapse: collapse;
+	background: rgba(255,255,255,0.5);
+		
+}
+
+#ajaxContent tr td{
+	padding: 4px;
+}
+#ajaxContent, #ajaxContent tr, #ajaxContent tr td{
+	border: 1px solid black;
+}
+
+#footer{
+	padding-top:0px;
+}
+a{
+	color:#2a4d69;  
+	text-decoration: none;
+	text-decoration-style: none;
+  }
