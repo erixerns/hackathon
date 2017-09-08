@@ -36,6 +36,8 @@ by the municipal goverment and the users can see the progress of the work and th
 
 Theme : i dont know :
 Heading: E voting
-Descrption:     To make a website/apk whre user have to just enter there  voter id card no. and just vote for their respective candidates...
-                we will see to the security reasons and trafficking or exploitation . that a person can not cheat  and the person found to  
-                replicate or cheat would be banned of not allowed to vote for next time ...
+Descrption:     To make a website/apk whre user have to just enter 
+		there  voter id card no. and just vote for their respective candidates
+		then it'll ask for finger print and using AR it'll scan the facial features which would be stored in the directory
+		it will be a 5 phase security system 
+	        and in the end a voice detection using perfect match of given keyword
