@@ -1,0 +1,12 @@
+theme better soceity..
+
+work to tbe done on "a webpage for Ngo"
+::    intro to the page 
+::    make a data base of the problems 
+::    another for solution
+::    contact us
+::    instant gps locator  for any of the prblems
+::    donation amount token
+::    integration with google
+::    location map of nearby by ngo places + child homes + vridhashram + police station
+::    
