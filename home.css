@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+#body{
+	margin:auto;
+}
+#header {
+	margin: auto;
+	border: 1px dashed blue;
+	height: 80px;
+	background-color: #4b86b4;
+}
+#tabBar {
+	border: 1px solid black;
+	margin: auto;
+	width: 260px;
+}
+#contentBody div{
+	display:inline-block;
+	overflow: auto;
+}
+#tabs {
+	list-style: none;
+	height: 50px;
+	width: 220px;
+	;
+	margin: auto;
+}
+
+#bodyTable{
+	height: 600px;
+	width:200px;
+	border:1px dashed black;
+}
+#animateBox{
+
+	margin-top:0px;
+	#border: 1px solid black;
+	height: 0px;
+	width:50px;
+}
+.item {
+	color: #e7eff6;
+	padding: 10px 2px 0px 2px;
+	display: inline-block;
+	font-size: 20px;
+}
+#contentBody{
+	margin: auto;
+	height:300px;
+	width:400px;
+}
+#contentForeBody {
+	padding-top: 10px;
+	width: 300px;
+	margin: auto;
+	height: 150px;
+}
+.textField {	
+	padding-bottom: 3px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	margin:auto;
+	height: 35px;;
+	width: 270px;
+	outline: none;
+	border: 1px solid #949191;
+}
+.textField:focus {
+	box-shadow: 0 0 2px rgba(81, 203, 238, 1);
+	border: 1px solid rgba(81, 203, 238, 1);
+}

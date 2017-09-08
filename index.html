@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Help 4 All</title>
+<link href="home.css" type="text/css" rel="stylesheet"/>
+</head>
+<body id="body">
+<div id="header">
+  <div id="tabBar">
+    <ul id="tabs">
+      <table>
+        <tr>
+          <td><li class="item">Home</li></td>
+          <td><li class="item">About</li></td>
+          <td><li class="item">Contact</li></td>
+        </tr>
+      </table>
+    </ul>
+  </div>
+</div>
+<div id ="mainContentBody">
+  <table id="bodyTable">
+    <tr>
+      <td style="height: 2px;"><div id="animateBox" style="{margin-top: 0px}"> </div></td>
+    </tr>
+    <tr align="center">
+      <td style="height: 100px"><div id="contentBody">
+          <div id="contentForeBody">
+            <table>
+              <tr>
+                <td><input type="text" name="state" placeholder="State" class="textField" id="stateField" onKeyUp="getNGO(this.value)"/></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="district" placeholder="District" class="textField"/></td>
+              </tr>
+            </table>
+          </div>
+        </div></td>
+    </tr>
+    <tr>
+      <table id="ajaxContent">
+      </table>
+    </tr>
+  </table>
+  <p id="test"></p>
+</div>
+<div id="footer">
+  <p>Made for Moz://a Hackathon 2017, VIT Chennai</p>
+</div>
+<script>
+	var screenWidth = ((screen.availWidth-200)).toString()+"px";
+	document.getElementById("body").style.width=screenWidth;
+	document.getElementById("header").style.width=screenWidth;
+	document.getElementById("contentBody").style.width=screenWidth;
+	document.getElementById("footer").style.width=screenWidth;
+</script> 
+<script>
+	
+function getNGO(str) {
+    if (str.length == 0) { 
+        document.getElementById("test").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("test").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "sqldata.php?key=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+</body>
+</html>

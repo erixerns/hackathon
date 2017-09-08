@@ -12,12 +12,12 @@ if($connection->connect_error){
 }
 
 if(count($_GET)>0){
-    $key=($_GET);
+    $key=($_GET['key']);
 }
 
-$sqlCommand = "Select * from ngoData where keyword like %$key%;";
-$result = mysqli_query($sqlCommand);
+$sqlCommand = "Select state from table 5 where keyword like %$key%;";
+$result = $connection->query($sqlCommand);
 
-echo $result;
+echo $connection->error;
 
 ?>
