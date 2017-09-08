@@ -11,10 +11,9 @@ Heading:"a webpage for Ngo"
 ::    donation amount token
 ::    integrated with google search engine
 ::    location map of nearby by ngo places + child homes + vridhashram + police station
-::    Add an option to volunteer
 
 Theme: Better Society
-Heading: " VIT clubZ-A better version of VIT Intranet "                                
+Heading: " CAMPUS CLUB "                                
 :: create a cloud storage
 :: faculty login,member login,council login,Open for all
 	::OPEN FOR ALL-people can get photos for events 
@@ -27,6 +26,8 @@ Heading: " VIT clubZ-A better version of VIT Intranet "
 Theme: Better Society
 Heading: "Opinions Site"
 Description: A website where people people share their opinion and articles on current topics for newspapers to follow.
+
 ::Database to store the articles
 ::A Search option to look for a particular article
+
 
