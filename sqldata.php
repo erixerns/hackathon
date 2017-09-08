@@ -20,3 +20,4 @@ $result = mysqli_query($sqlCommand);
 
 echo $result;
 
+?>
