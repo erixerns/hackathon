@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+
 #body{
 	margin:auto;
 }
@@ -45,15 +46,12 @@
 	font-size: 20px;
 }
 #contentBody{
-	margin: auto;
-	height:300px;
-	width:400px;
+	height: 150px;
+	width: 700px;
 }
 #contentForeBody {
-	padding-top: 10px;
-	width: 600px;
-	margin: auto;
-	height: 100px;
+	padding-top: 20px;
+	height: 95px;
 }
 .textField {	
 	padding-bottom: 3px;
@@ -74,11 +72,18 @@
 	box-shadow: 0 0 2px rgba(81, 203, 238, 1);
 	border: 1px solid rgba(81, 203, 238, 1);
 }
-#
+
 .tdTxt {
-	width: 250px;
+	width: 300px;
 }
 
 #ajaxContent{
+	border-collapse: collapse;
+}
+
+#ajaxContent tr td{
+	padding: 4px;
+}
+#ajaxContent, #ajaxContent tr, #ajaxContent tr td{
 	border: 1px solid black;
 }

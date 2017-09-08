@@ -20,41 +20,41 @@
   </div>
 </div>
 <div id ="mainContentBody">
-  <table id="bodyTable">
-    <tr>
-      <td style="height: 2px;"><div id="animateBox" style="{margin-top: 0px}"> </div></td>
-    </tr>
-    <tr align="center">
-      <td style="height: 100px"><div id="contentBody">
-          <div id="contentForeBody">
-            <table style="width: 500px">
-              <tr>
-                <td class="tdTxt"><input type="text" name="state" placeholder="State" class="textField" id="stateField" onKeyUp="autocompleteState(this.value)"/></td><td id="stateAuto"></td>
-              </tr>
-              <tr style="width:700px">
-                <td class="tdTxt"><input type="text" name="district" placeholder="District" class="textField" onKeyUp="autocompleteDis(this.value)" id="disField"/></td><td id="disAuto"></td>
-              </tr>
-            </table>
-          </div>
-        </div></td>
-    </tr>
-  </table>
-        <div id="ajaxContent" style="height: 100px; width:100px">
+  <div >
+    <div id="contentBody">
+      <div id="contentForeBody">
+        <table style="width: 500px ; margin:auto" >
+          <tr>
+            <td class="tdTxt"><input type="text" name="state" placeholder="State" class="textField" id="stateField" onKeyUp="autocompleteState(this.value)"/></td>
+            <td id="stateAuto"></td>
+          </tr>
+          <tr style="width:700px">
+            <td class="tdTxt"><input type="text" name="district" placeholder="District" class="textField" onKeyUp="autocompleteDis(this.value)" id="disField"/></td>
+            <td id="disAuto"></td>
+          </tr>
+        </table>
       </div>
-  <p id="test"></p>
+    </div>
+  </div>
+  <div style="height: 300px; widows: 800px">
+    <table id="ajaxContent" style="height: 100px ;border=1; margin: auto">
+    </table>
+  </div>
 </div>
 <div id="footer">
-  <p>Made for Moz://a Hackathon 2017, VIT Chennai</p>
+	<strong><p>Made for Moz://a Hackathon 2017, VIT Chennai</p></strong>
 </div>
 <script>
 	var screenWidth = ((screen.availWidth-200)).toString()+"px";
 	document.getElementById("body").style.width=screenWidth;
 	document.getElementById("header").style.width=screenWidth;
 	document.getElementById("contentBody").style.width=screenWidth;
+	document.getElementById("contentForeBody").style.width=screenWidth;
 	document.getElementById("footer").style.width=screenWidth;
 </script> 
 <script>
 var valid=true;
+	
 function autocompleteState(str) {
     if (str.length == 0) { 
         document.getElementById("stateAuto").innerHTML = "";
@@ -71,6 +71,7 @@ function autocompleteState(str) {
     }
 }
 function autocompleteDis(str) {
+	var state=document.getElementById("stateField").value;
 	valid=true;
     if (str.length == 0) { 
         document.getElementById("disAuto").innerHTML = "";
@@ -82,14 +83,10 @@ function autocompleteDis(str) {
                 document.getElementById("disAuto").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET", "autocorrect.php?key=" + str + "&col="+"district" , true);
+        xmlhttp.open("GET", "autocorrect.php?key=" + str + "&col=district&state="+state , true);
         xmlhttp.send();
     }
-}
-	
-if(valid == true){
-
-		var district = document.getElementById("disField").value;
+	var district = document.getElementById("disField").value;
 	var state = document.getElementById("stateField").value;
 	    if (district.length == 0) { 
         document.getElementById("ajaxContent").innerHTML = "";
@@ -100,10 +97,11 @@ if(valid == true){
                 document.getElementById("ajaxContent").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET", "sqldata.php?state=m&dis=u"/* + state + "&dis="+district */, true);
+        xmlhttp.open("GET", "sqldata.php?state=" + state + "&dis="+district, true);
         xmlhttp.send();
     }
 }
+
 </script>
 </body>
 </html>

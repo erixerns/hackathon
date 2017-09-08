@@ -18,10 +18,10 @@ if(count($_GET)>0){
 
 
 $str="";
-$sqlCommand = "Select distinct state , district from ngotable where state like '$state%' and district like '$dis%';";
+$sqlCommand = "Select distinct state , district, name, scheme from ngotable where state like '$state%' and district like '$dis%';";
 $result = $connection->query($sqlCommand);
 while($data = $result->fetch_assoc()){
-	$str=$str."<tr><td>".$data['state']."</td><td>".$data['district']."</td></tr>";
+	$str=$str."<tr><td>".$data['state']."</td><td>".$data['district']."</td><td>".$data['name']."</td><td>".$data['scheme']."</td></tr>";
 }
 
 echo $str;
