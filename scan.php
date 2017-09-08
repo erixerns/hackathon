@@ -33,11 +33,8 @@ function insertData($name,$link){
 
 };
 $input=file_get_contents("http://www.ngosindia.com/");
-
-//echo ($input);
 $links=array();
 $regexp = "<a\s[^>]*href=(\"??)([^\" >]*?)\\1[^>]*>(.*)<\/a>";
-//$regexp = "href=\"http:\/\/www\..*\.nsogindia.com\"";
 if(preg_match_all("/$regexp/siU", $input, $matches, PREG_SET_ORDER)) {
     foreach($matches as $match){
         if(preg_match("/^http:\/\/www\..*\.ngosindia.com\/?$/",$match[2])){
