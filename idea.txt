@@ -10,7 +10,7 @@ Heading:"a webpage for Ngo"
 ::    location map of nearby by ngo places + child homes + vridhashram + police station
 
 Theme: Better Society
-Heading: " VIT clubZ-A better version of VIT Intranet "
+Heading: " VIT clubZ-A better version of VIT Intranet "                                
 :: create a cloud storage
 :: faculty login,member login,council login,Open for all
 	::OPEN FOR ALL-people can get photos for events 
@@ -28,6 +28,9 @@ Description: A website where people people share their opinion and articles on c
 ::A Search option to look for a particular article
 
 Theme: Better Society
+Heading: "Municipal Works"
+Description: To make a website/app that where users can add their problems and queries collectively which can be viewed 
+by the municipal goverment and the users can see the progress of the work and the budget put in place for it.
 
 
 
