@@ -1,0 +1,12 @@
+theme better society..
+
+work to be done for " VIT clubZ-A better version of VIT Intranet "
+:: create a cloud storage
+:: faculty login,member login,council login,Open for all
+	::OPEN FOR ALL-people can get photos for events 
+		       inform about the events 
+:: immediate volunteer take-in desk
+:: AI interactive environment to coordinate for events
+:: suggestion box
+:: pop-up notifications
+::
