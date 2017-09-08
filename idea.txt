@@ -22,3 +22,15 @@ work to be done for " VIT clubZ-A better version of VIT Intranet "
 :: AI interactive environment to coordinate for events
 :: suggestion box
 :: pop-up notifications
+
+theme better society...
+work to be done for "Opinions Site"
+Description: A website where people people share their opinion and articles on current topics for newspapers to follow.
+
+::Database to store the articles
+::A Search option to look for a particular article
+
+
+
+
+
