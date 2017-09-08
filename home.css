@@ -93,5 +93,10 @@
 }
 
 #footer{
-	padding-top:100px;
+	padding-top:0px;
 }
+a{
+	color:#2a4d69;  
+	text-decoration: none;
+	text-decoration-style: none;
+  }
