@@ -1,13 +1,17 @@
 Theme: Better Society
 Heading:"a webpage for Ngo"
-::    intro to the page 
+::    intro to the page
+::    To make a webspage on which two options are available---1.NGO issues     
+							      2.Govermental Issues
+::    Questionaires and open for all article page for newsreporters 
 ::    make a data base of the problems 
 ::    another for solution
 ::    contact us
 ::    instant gps locator  for any of the prblems
 ::    donation amount token
-::    integration with google
+::    integrated with google search engine
 ::    location map of nearby by ngo places + child homes + vridhashram + police station
+::    Add an option to volunteer
 
 Theme: Better Society
 Heading: " VIT clubZ-A better version of VIT Intranet "                                
@@ -23,23 +27,6 @@ Heading: " VIT clubZ-A better version of VIT Intranet "
 Theme: Better Society
 Heading: "Opinions Site"
 Description: A website where people people share their opinion and articles on current topics for newspapers to follow.
-
 ::Database to store the articles
 ::A Search option to look for a particular article
-
-Theme: Better Society
-Heading: "Municipal Works"
-Description: To make a website/app that where users can add their problems and queries collectively which can be viewed 
-by the municipal goverment and the users can see the progress of the work and the budget put in place for it.
-
-Theme : i dont know :
-Heading: E voting
-Descrption:     To make a website/apk whre user have to just enter there  voter id card no. and just vote for their respective candidates...
-                we will see to the security reasons and trafficking or exploitation . that a person can not cheat  and the person found to  
-                replicate or cheat would be banned of not allowed to vote for next time ...
-
- 
-
-
-
 
