@@ -1,6 +1,12 @@
-<?php
+<!--
+    Has bug, make the code to insert elements dinctinctly
+-->
 
+<?php
+ini_set('max_execution_time', 0); 
 function getNGO($website,$name) {
+    $conn=mysqli_connect("localhost","root","","hackathon");
+
     $input=file_get_contents("$website");
 
     $links=array();
@@ -9,10 +15,14 @@ function getNGO($website,$name) {
         foreach ($matches as $match) {
             if(strlen($match[2])>5){
                 if (preg_match("/^[a-zA-Z-]*\.html$/", $match[2])) {
-                    echo $match[2]."<br/>";
+                    echo "$match[2]";
+                    $conn->query("insert into statengo(state,ngo) values('$name','$match[2]');");
+                    echo $conn->error;
                 }
                 else if(preg_match("/^(((?!www).)*)\..*\..*\/$/",$match[2])){
-                    echo $match[2]."<br/>";
+                    echo "$match[2]";
+                    $conn->query("insert into statengo(state,ngo) values('$name','$match[2]');");
+                    echo $conn->error;
                 }
         }
         }
@@ -22,16 +32,16 @@ function getNGO($website,$name) {
 $connection=mysqli_connect("localhost","root","","hackathon");
 $query="Select state,website from statewebsite;";
 $result=$connection->query($query);
+
 $i=1;
 while($data=$result->fetch_assoc()){
     echo $data['state']."<br/>";
-    
-    getNGO($data['website'],$data['state']);
+    getNGO($data['website'],$data['state']);   
     $i++;
-    if($i>73){
-        break;
-    }
-    
+    echo $i;
+    if($i>38){
+        exit;
+    } 
 }
 
 
